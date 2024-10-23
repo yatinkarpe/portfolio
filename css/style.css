@@ -211,8 +211,11 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_home_wrapper h1 {
     opacity: 80%;
     position: absolute;
-    top: 16%;
-    font-size: 150px;
+    /* top: 26%; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 100px;
     color: #ffffff;
     font-weight: bold;
     /* background: url(../images/content/banner_text_bg.jpg) no-repeat; */
@@ -226,7 +229,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     margin-top: 10%;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 50%;
     max-width: 1200px;
     margin: 0 auto;
 }
