@@ -23,14 +23,14 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
-	color: #b7b7b7;
+	color: #ffffff;
 	background-color:#010101;
 	-webkit-font-smoothing: antialiased;
 }
 /*--------- Body End -------*/
 /*---------- Typography Css Start -------*/
 a {
-	color: #b7b7b7;
+	color: #ffffff;
 	text-decoration: none;
 	cursor:pointer;
 }
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	line-height: 1.1;
-	color: #fffefe;
+	color: #ffffff;
 }
 img {
 	max-width: 100%;
@@ -863,13 +863,13 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_contact_details_box.details_box1{
-	background-image:url(https://dummyimage.com/400x267);
+	background-image:url("../images/content/Mobile.jpg");
 }
 .prt_contact_details_box.details_box2{
-	background-image:url(https://dummyimage.com/400x267);
+	background-image:url("../images/content/Email.jpg");
 }
 .prt_contact_details_box.details_box3{
-	background-image:url(https://dummyimage.com/400x267);
+	background-image:url("../images/content/Location.jpg");
 }
 /*---------- Services css Start -------*/
 .prt_services_wrapper{
@@ -1010,7 +1010,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_couter_wrapper {
     display: inline-block;
     width: 100%;
-    background-image: url(https://dummyimage.com/1920x644);
+    background-image: url("../images/content/Background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
