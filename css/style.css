@@ -690,7 +690,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_profile_slider .item:hover i.pl_clr3{
-    color: #76c239;
+    color: #0A66C2;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
