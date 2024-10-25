@@ -1072,28 +1072,71 @@ input:focus, textarea:focus, select:focus, button:focus {
 	text-align:center;
 }
 #circles-1{
-	background-image:url(https://dummyimage.com/169x165);
+	background-image:url("../images/content/Photoshop.svg");
 	border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #circles-2{
-	background-image:url(https://dummyimage.com/169x165);
+	background-image:url("../images/content/Illustrator.svg");
 	border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #circles-3{
-	background-image:url(https://dummyimage.com/169x165);
+	background-image:url("../images/content/Figma.svg");
 	border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #circles-4{
-	background-image:url(https://dummyimage.com/169x165);
+	background-image:url("../images/content/XD.svg");
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#circles-5{
+	background-image:url("../images/content/CorelDraw.svg");
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#circles-6{
+	background-image:url("../images/content/Marvel.svg");
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#circles-7{
+	background-image:url("../images/content/Premiere Pro.svg");
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#circles-8{
+	background-image:url("../images/content/After Effect.svg");
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#circles-9{
+	background-image:url("../images/content/HTML & CSS.svg");
+	border-radius: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#circles-10{
+	background-image:url("../images/content/Wordpress.svg");
 	border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1208,7 +1251,8 @@ button.prt_btn.prt_btn_portfolio {
     transition: all 0.3s;
 }
 .prt_portfolio_img:hover:after{
-	opacity:1;
+	opacity:0.3;
+    background-color: black;
 	visibility:visible;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -1262,13 +1306,15 @@ button.prt_btn.prt_btn_portfolio {
 .prt_portfolio_text h4{
 	font-size:18px;
 	text-transform:uppercase;
-	color:#000000;
+	color:white;
 	margin-top:0px;
+    font-weight: 600;
 }
 .prt_portfolio_text p{
 	margin:0px;
 	text-transform:capitalize;
-	color:#000000;
+	color:white;
+    font-weight: 600;
 }
 /*---------- Footer css Start -------*/
 .prt_footer_wrapper {
