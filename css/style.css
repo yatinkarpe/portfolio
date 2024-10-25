@@ -1251,7 +1251,7 @@ button.prt_btn.prt_btn_portfolio {
     transition: all 0.3s;
 }
 .prt_portfolio_img:hover:after{
-	opacity:0.3;
+	opacity:0.6;
     background-color: black;
 	visibility:visible;
 	-webkit-transition: all 0.3s;
