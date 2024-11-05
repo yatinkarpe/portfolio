@@ -1015,6 +1015,7 @@ button:focus {
     top: 100%;
     z-index: 1;
     display: none;
+    min-height: 900px !important;
 }
 
 .prt_services_slider_wrapper {
