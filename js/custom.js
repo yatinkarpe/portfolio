@@ -285,5 +285,106 @@ Assigned to: ThemeForest
 		});
 
 	});
-
 })();
+//Owl carousel Portfolio
+$(document).ready(function () {
+	// Placeholder data for each category
+	const carouselData = {
+		"website-designs": [
+			"./images/content/port1_big.jpg",
+			"./images/content/port2_big.jpg"
+		],
+		"emailer-designs": [
+			"./images/content/port1_big.jpg",
+			"./images/content/port2_big.jpg"
+		],
+		"mobile-app-designs": [
+			"./images/content/port1_big.jpg",
+			"./images/content/port2_big.jpg"
+		],
+		"website-banners": [
+			"./images/content/port1_big.jpg",
+			"./images/content/port2_big.jpg"
+		],
+		"dashboard-designs": [
+			"./images/content/port1_big.jpg",
+			"./images/content/port2_big.jpg"
+		],
+		"social-designs": [
+			"./images/content/port1_big.jpg",
+			"./images/content/port2_big.jpg"
+		],
+	};
+
+	// Function to initialize Owl Carousel with provided images
+	function initializeCarousel(images) {
+		const carousel = $("#carouselContent");
+		carousel.empty(); // Clear previous content
+
+		images.forEach(imgSrc => {
+			carousel.append(`<div class="item"><img src="${imgSrc}" alt="Carousel Image"></div>`);
+		});
+
+		// Destroy any existing Owl Carousel instance to prevent duplication
+		if (carousel.hasClass("owl-loaded")) {
+			carousel.trigger("destroy.owl.carousel");
+			carousel.removeClass("owl-loaded");
+		}
+
+		// Reinitialize the Owl Carousel with new images
+		carousel.owlCarousel({
+			items: 1,
+			loop: true,
+			nav: true,
+			dots: false,
+			autoplay: false,
+			autoplayTimeout: 3000,
+			navText: ["<", ">"]
+		});
+	}
+
+	// Event listener for cards
+	$(".prt_portfolio_img[data-category='website-designs']").on("click", function () {
+		const images = carouselData["website-designs"];
+		initializeCarousel(images);
+		openModal();
+	});
+	$(".prt_portfolio_img[data-category='emailer-designs']").on("click", function () {
+		const images = carouselData["emailer-designs"];
+		initializeCarousel(images);
+		openModal();
+	});
+	$(".prt_portfolio_img[data-category='mobile-app-designs']").on("click", function () {
+		const images = carouselData["mobile-app-designs"];
+		initializeCarousel(images);
+		openModal();
+	});
+	$(".prt_portfolio_img[data-category='website-banners']").on("click", function () {
+		const images = carouselData["website-banners"];
+		initializeCarousel(images);
+		openModal();
+	});
+	$(".prt_portfolio_img[data-category='dashboard-designs']").on("click", function () {
+		const images = carouselData["dashboard-designs"];
+		initializeCarousel(images);
+		openModal();
+	});
+	$(".prt_portfolio_img[data-category='social-designs']").on("click", function () {
+		const images = carouselData["social-designs"];
+		initializeCarousel(images);
+		openModal();
+	});
+
+	// Open modal function
+	function openModal() {
+		$("#carouselModal").css("display", "flex");
+	}
+
+	// Close modal function
+	function closeModal() {
+		$("#carouselModal").css("display", "none");
+	}
+
+	// Attach close function to close icon
+	$(".close-modal").on("click", closeModal);
+});
