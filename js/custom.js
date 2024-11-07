@@ -291,8 +291,8 @@ $(document).ready(function () {
 	// Placeholder data for each category
 	const carouselData = {
 		"website-designs": [
-			"./images/content/port1_big.jpg",
-			"./images/content/port2_big.jpg"
+			"./images/content/Desktop_21.jpg",
+			"./images/content/Desktop_20.jpg"
 		],
 		"emailer-designs": [
 			"./images/content/port1_big.jpg",
