@@ -291,28 +291,70 @@ $(document).ready(function () {
 	// Placeholder data for each category
 	const carouselData = {
 		"website-designs": [
-			"./images/content/Desktop_21.jpg",
-			"./images/content/Desktop_20.jpg"
+			{ image: "./images/content/Desktop_01.jpg", url: "https://example.com/page1" },
+			{ image: "./images/content/Desktop_02.jpg", url: "https://example.com/page2" },
+			{ image: "./images/content/Desktop_03.jpg", url: "https://example.com/page3" },
+			{ image: "./images/content/Desktop_04.jpg", url: "https://example.com/page4" },
+			{ image: "./images/content/Desktop_05.jpg", url: "https://example.com/page5" },
+			{ image: "./images/content/Desktop_06.jpg", url: "https://example.com/page6" },
+			{ image: "./images/content/Desktop_07.jpg", url: "https://example.com/page7" },
+			{ image: "./images/content/Desktop_08.jpg", url: "https://example.com/page8" },
+			{ image: "./images/content/Desktop_09.jpg", url: "https://example.com/page9" },
 		],
 		"emailer-designs": [
-			"./images/content/port1_big.jpg",
-			"./images/content/port2_big.jpg"
+			{ image: "./images/content/Desktop_01.jpg", url: "https://example.com/page1" },
+			{ image: "./images/content/Desktop_02.jpg", url: "https://example.com/page2" },
+			{ image: "./images/content/Desktop_03.jpg", url: "https://example.com/page3" },
+			{ image: "./images/content/Desktop_04.jpg", url: "https://example.com/page4" },
+			{ image: "./images/content/Desktop_05.jpg", url: "https://example.com/page5" },
+			{ image: "./images/content/Desktop_06.jpg", url: "https://example.com/page6" },
+			{ image: "./images/content/Desktop_07.jpg", url: "https://example.com/page7" },
+			{ image: "./images/content/Desktop_08.jpg", url: "https://example.com/page8" },
+			{ image: "./images/content/Desktop_09.jpg", url: "https://example.com/page9" },
 		],
 		"mobile-app-designs": [
-			"./images/content/port1_big.jpg",
-			"./images/content/port2_big.jpg"
+			{ image: "./images/content/Desktop_01.jpg", url: "https://example.com/page1" },
+			{ image: "./images/content/Desktop_02.jpg", url: "https://example.com/page2" },
+			{ image: "./images/content/Desktop_03.jpg", url: "https://example.com/page3" },
+			{ image: "./images/content/Desktop_04.jpg", url: "https://example.com/page4" },
+			{ image: "./images/content/Desktop_05.jpg", url: "https://example.com/page5" },
+			{ image: "./images/content/Desktop_06.jpg", url: "https://example.com/page6" },
+			{ image: "./images/content/Desktop_07.jpg", url: "https://example.com/page7" },
+			{ image: "./images/content/Desktop_08.jpg", url: "https://example.com/page8" },
+			{ image: "./images/content/Desktop_09.jpg", url: "https://example.com/page9" },
 		],
 		"website-banners": [
-			"./images/content/port1_big.jpg",
-			"./images/content/port2_big.jpg"
+			{ image: "./images/content/Desktop_01.jpg", url: "https://example.com/page1" },
+			{ image: "./images/content/Desktop_02.jpg", url: "https://example.com/page2" },
+			{ image: "./images/content/Desktop_03.jpg", url: "https://example.com/page3" },
+			{ image: "./images/content/Desktop_04.jpg", url: "https://example.com/page4" },
+			{ image: "./images/content/Desktop_05.jpg", url: "https://example.com/page5" },
+			{ image: "./images/content/Desktop_06.jpg", url: "https://example.com/page6" },
+			{ image: "./images/content/Desktop_07.jpg", url: "https://example.com/page7" },
+			{ image: "./images/content/Desktop_08.jpg", url: "https://example.com/page8" },
+			{ image: "./images/content/Desktop_09.jpg", url: "https://example.com/page9" },
 		],
 		"dashboard-designs": [
-			"./images/content/port1_big.jpg",
-			"./images/content/port2_big.jpg"
+			{ image: "./images/content/Desktop_01.jpg", url: "https://example.com/page1" },
+			{ image: "./images/content/Desktop_02.jpg", url: "https://example.com/page2" },
+			{ image: "./images/content/Desktop_03.jpg", url: "https://example.com/page3" },
+			{ image: "./images/content/Desktop_04.jpg", url: "https://example.com/page4" },
+			{ image: "./images/content/Desktop_05.jpg", url: "https://example.com/page5" },
+			{ image: "./images/content/Desktop_06.jpg", url: "https://example.com/page6" },
+			{ image: "./images/content/Desktop_07.jpg", url: "https://example.com/page7" },
+			{ image: "./images/content/Desktop_08.jpg", url: "https://example.com/page8" },
+			{ image: "./images/content/Desktop_09.jpg", url: "https://example.com/page9" },
 		],
 		"social-designs": [
-			"./images/content/port1_big.jpg",
-			"./images/content/port2_big.jpg"
+			{ image: "./images/content/Desktop_01.jpg", url: "https://example.com/page1" },
+			{ image: "./images/content/Desktop_02.jpg", url: "https://example.com/page2" },
+			{ image: "./images/content/Desktop_03.jpg", url: "https://example.com/page3" },
+			{ image: "./images/content/Desktop_04.jpg", url: "https://example.com/page4" },
+			{ image: "./images/content/Desktop_05.jpg", url: "https://example.com/page5" },
+			{ image: "./images/content/Desktop_06.jpg", url: "https://example.com/page6" },
+			{ image: "./images/content/Desktop_07.jpg", url: "https://example.com/page7" },
+			{ image: "./images/content/Desktop_08.jpg", url: "https://example.com/page8" },
+			{ image: "./images/content/Desktop_09.jpg", url: "https://example.com/page9" },
 		],
 	};
 
@@ -321,8 +363,14 @@ $(document).ready(function () {
 		const carousel = $("#carouselContent");
 		carousel.empty(); // Clear previous content
 
-		images.forEach(imgSrc => {
-			carousel.append(`<div class="item"><img src="${imgSrc}" alt="Carousel Image"></div>`);
+		images.forEach(item => {
+			carousel.append(`
+				<div class="item">
+					<a href="${item.url}" target="_blank">
+						<img src="${item.image}" alt="Carousel Image">
+					</a>
+				</div>
+			`);
 		});
 
 		// Destroy any existing Owl Carousel instance to prevent duplication
