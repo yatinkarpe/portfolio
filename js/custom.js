@@ -561,3 +561,22 @@ $(document).ready(function () {
 	// Attach close function to close icon
 	$(".close-modal").on("click", closeModal);
 });
+
+/* Typing effect */
+document.addEventListener('DOMContentLoaded', function () {
+	const text = "I`m\nYatin Anant Karpe";
+	const target = document.getElementById("typingEffect");
+
+	let index = 0;
+	let formattedText = text;
+
+	function typeWriter() {
+		if (index < formattedText.length) {
+			target.innerHTML += formattedText.charAt(index);
+			index++;
+
+			setTimeout(typeWriter, 150);
+		}
+	}
+	typeWriter();
+});

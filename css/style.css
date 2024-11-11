@@ -231,8 +231,9 @@ button:focus {
 .prt_home_wrapper {
     background-color: #000000;
     position: relative;
-    overflow-y: auto;
     padding: 200px 0px;
+    overflow: hidden;
+
 }
 
 .prt_home_wrapper:after {
@@ -1627,6 +1628,32 @@ button.prt_btn.prt_btn_portfolio {
     font-size: 24px;
     background: transparent;
     font-weight: 900;
+}
+
+#typingEffect {
+    white-space: pre-wrap;
+    overflow: hidden; /* Hide text while it's being typed */
+    /* Cursor style */
+    width: 0; /* Initial width of 0 */
+    display: inline-block; /* Ensure the element behaves like inline text */
+    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 /*---------- Main Wrapper css End -------*/
