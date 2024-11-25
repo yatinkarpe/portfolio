@@ -1632,10 +1632,13 @@ button.prt_btn.prt_btn_portfolio {
 
 #typingEffect {
     white-space: pre-wrap;
-    overflow: hidden; /* Hide text while it's being typed */
+    overflow: hidden;
+    /* Hide text while it's being typed */
     /* Cursor style */
-    width: 0; /* Initial width of 0 */
-    display: inline-block; /* Ensure the element behaves like inline text */
+    width: 0;
+    /* Initial width of 0 */
+    display: inline-block;
+    /* Ensure the element behaves like inline text */
     animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
 }
 
@@ -1644,6 +1647,7 @@ button.prt_btn.prt_btn_portfolio {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
@@ -1661,6 +1665,7 @@ button.prt_btn.prt_btn_portfolio {
 @media(max-width:1500px) {
     .prt_home_wrapper video {
         position: absolute;
+
     }
 }
 
@@ -1678,6 +1683,7 @@ button.prt_btn.prt_btn_portfolio {
 @media(max-width:991px) {
     .prt_home_wrapper video {
         position: absolute;
+        display: none;
     }
 
     .prt_home_wrapper h1 {
@@ -1745,6 +1751,91 @@ button.prt_btn.prt_btn_portfolio {
 }
 
 @media (max-width: 767px) {
+    .prt_logo_wrapper img {
+        left: 10px;
+        top: 10px;
+        z-index: 10;
+    }
+
+    .prt_menu_wrapper a.prt_top {
+        top: 25px;
+    }
+
+    .prt_menu_wrapper a.prt_left {
+        left: -40px;
+        z-index: 2;
+    }
+
+    .prt_menu_wrapper a.prt_right {
+        right: -30px;
+        z-index: 2;
+    }
+
+    .prt_home_wrapper {
+        height: 800px !important;
+    }
+
+    .prt_menu_wrapper a.prt_bottom {
+        bottom: 10px;
+    }
+
+    .prt_loadmore {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .prt_heading_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .prt_contact_wrapper,
+    .prt_portfolio_wrapper,
+    .prt_about_wrapper,
+    .prt_services_wrapper {
+        z-index: 3;
+    }
+
+    .prt_about_details a.prt_btn {
+        margin-bottom: 30px;
+    }
+
+    .prt_about_details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prt_home_wrapper:after {
+        background-color: transparent;
+    }
+
+    .prt_home_wrapper {
+        background-color: transparent;
+    }
+
+    body {
+        background: url("../images/content/bg_mob_1.png") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    /* Black overlay with opacity */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* Black overlay with 50% opacity */
+        z-index: -1;
+        /* Place it behind content */
+    }
+
+
+
+
     .prt_counter_box h3 {
         margin: 0px;
     }
@@ -1865,7 +1956,8 @@ button.prt_btn.prt_btn_portfolio {
     }
 
     .prt_home_wrapper h1 {
-        font-size: 50px;
+        font-size: 65px;
+        padding: 80px;
     }
 
     .prt_counter_box {
